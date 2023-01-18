@@ -1,0 +1,134 @@
+body {
+    background-color: #EEEEEE;
+    margin: 0px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 0px 30px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    background-color: white;
+    /* border: 2px solid green; */
+}
+.nav > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 2px solid red; */
+    
+}
+.nav > div:nth-child(1){
+    width: 40%;
+    font-weight: bold;
+    
+}
+.nav > div:nth-child(2){
+    height: 100%;
+    width: 25%;
+}
+#logo {
+    height: 40px;
+}
+#offers {
+    background: #d4316f;
+    background: linear-gradient(to right, #d4316f 0%, #ED5133 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.nav > div > div {
+    /* border: 1px solid blue; */
+    justify-content: center;
+    align-items: center;
+}
+.nav a {
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    
+    text-align: center;
+}
+.links > a:nth-child(1) {
+    margin-top: 5px;
+}
+.menu a > img {
+    margin-top: 15px;
+    height: 20px;
+}
+
+.menu a > p {
+    margin-top: -5px;
+    font-size: 12px;
+}
+.primary-category {
+    display: flex;
+    width: 60%;
+    height: 30px;
+    margin: auto;
+    /* border: 2px solid red; */
+}
+.primary-category > a {
+    margin-right: 20px;
+    margin-top: -12px;
+    height: 100%;
+    text-decoration: none;
+    color: grey;
+}
+.primary-category > a:active {
+    margin-right: 20px;
+    color: black;
+    text-decoration: underline;
+}
+.category {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 60%;
+    margin: auto;
+    /* border: 2px solid blue; */
+    text-align: center;
+}
+.category > div:not(2) {
+    width: 100px;
+}
+.category img {
+    width: 70%;
+}
+.category p {
+    font-size: 10px;
+    margin-top: 0px;
+}
+#vtbar {
+    position: relative;
+    border-right: 2px solid #bbb;
+    height: 40px;
+    width: 0px;
+    right: 0px;
+    top: 22px;
+}
+.offers-section {
+    width: 60%;
+    margin-inline: auto;
+    margin-top: 30px;
+    display: flex;
+    border-top: 5px solid #5daef2;
+    background-color: #e7f3fd;
+}
+.offers-section > div:nth-child(1) { 
+    margin: 5px;
+}
+.offers-section > div:nth-child(2) { 
+    margin: 5px;
+}
+.offers-section img {
+    width: 50px;
+}
+.offer-slide {
+    width: 60%;
+    margin: auto;
+    display: flex;
+}
+.offer-slide img {
+    width: 50%;
+}
