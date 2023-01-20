@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <style>
+      /* All Your css here  */
+      .nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="nav">
+      <h1>Masai Country Records</h1>
+      <a href="./index.html">Home</a>
+      <a href="./visited.html">Visited</a>
+    </div>
+    <select id="sort">
+      <option value="">Sort By Population</option>
+      <option value="asc">Ascending</option>
+      <option value="desc">Descending</option>
+    </select>
+    <form>
+      <input type="text" placeholder="Search" id="search" />
+      <input type="submit" value="Search" />
+    </form>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Country</th>
+          <th>Rank</th>
+          <th>Population</th>
+          <th>Visited</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Here all rows will be appended  -->
+      </tbody>
+    </table>
+  </body>
+  <script>
+    // Write all JS here
+    const url = `https://dbioz2ek0e.execute-api.ap-south-1.amazonaws.com/mockapi/get-countries`;
+    var urlData=null;
+
+    async function fetchURL(){
+      try {
+        let res = await fetch(url);
+        res = await res.json();
+        console.log(res);
+        urlData=res.data;
+        display(res.data)
+
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    fetchURL();
+
+    let parent = document.querySelector("tbody");
+    let sortEl = document.getElementById("sort");
+    let formEl = document.querySelector("form");
+    let searchEl = document.getElementById("search")
+
+    function display(data){
+      parent.innerHTML="";
+      data.forEach((ele,ind) => {
+        let tr = document.createElement("tr");
+        let td1 = document.createElement("td");
+        let td2 = document.createElement("td");
+        let td3 = document.createElement("td");
+        let td4 = document.createElement("td");
+        let td5 = document.createElement("td");
+
+        td1.textContent=ele.id;
+        td2.textContent=ele.country;
+        td3.textContent=ele.Rank;
+        td4.textContent=ele.population;
+        td5.textContent="Visit";
+
+        td5.addEventListener("click",() => {
+          let visitData = JSON.parse(localStorage.getItem("visited"))||[];
+          visitData.push(ele);
+          localStorage.setItem("visited",JSON.stringify(visitData));
+        });
+
+        tr.append(td1,td2,td3,td4,td5);
+        parent.append(tr);
+      });
+    }
+
+    
+
+    formEl.addEventListener("submit", (e) => {
+      e.preventDefault();
+      let searchPara = searchEl.value;
+      let data = urlData;
+      let filterData = data.filter(ele => {
+        if(ele.country.toUpperCase().includes(searchPara.toUpperCase())){
+          return ele;
+          console.log(ele);
+        }
+      });
+      display(filterData);
+    })
+
+    
+    
+
+    
+    // sortEl.addEventListener("change", () => {
+    //   let sortSel=sortEl.value;
+    //   let sorturl="";
+    //   if(sortSel===""){
+    //     fetchURL(url);
+    //   } else if (sortSel=="asc") {
+    //     sorturl="https://dbioz2ek0e.execute-api.ap-south-1.amazonaws.com/mockapi/get-countries?sort=population&&order=asc";
+    //     fetchURL(sorturl);
+    //   } else if (sortSel=="desc") {
+    //     sorturl="https://dbioz2ek0e.execute-api.ap-south-1.amazonaws.com/mockapi/get-countries?sort=population&&order=desc";
+    //     fetchURL(sorturl);
+    //   }
+    // });
+    
+
+
+  </script>
+</html>
