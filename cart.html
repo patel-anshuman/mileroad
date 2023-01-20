@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #EEEEEE;
+            margin: 0px;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+        }
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 60px;
+            padding: 0px 30px;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+            background-color: white;
+            /* border: 2px solid green; */
+        }
+        .nav > div{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* border: 2px solid red; */
+            
+        }
+        .nav > div:nth-child(1){
+            width: 40%;
+            font-weight: bold;
+            
+        }
+        .nav > div:nth-child(2){
+            height: 100%;
+            width: 16.25%;
+        }
+        #logo {
+            height: 40px;
+        }
+        #offers {
+            background: #d4316f;
+            background: linear-gradient(to right, #d4316f 0%, #ED5133 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .nav > div > div {
+            /* border: 1px solid blue; */
+            justify-content: center;
+            align-items: center;
+        }
+        .nav a {
+            text-decoration: none;
+            color: black;
+            display: inline-block;
+            
+            text-align: center;
+        }
+        .links > a:nth-child(1) {
+            margin-top: 5px;
+        }
+        .menu a > img {
+            margin-top: 15px;
+            height: 20px;
+        }
+
+        .menu a > p {
+            margin-top: -5px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <div class="links">
+            <a href="home.html">
+                <img src="images/logo.png" id="logo" alt="">
+            </a>
+            <a href="">WOMEN</a>
+            <a href="">MEN</a>
+            <a href="">KIDS</a>
+            <a href="">HOME</a>
+            <a href="" id="offers">OFFERS</a>
+        </div>
+        <div class="menu">
+            <div>
+                <a href="search.html" id="search">
+                    <img src="images/menu2.png" alt="">
+                    <p>SEARCH</p>
+                </a>
+            </div>
+            <div>
+                <a href="cart.html" id="cart">
+                    <img src="images/menu3.png" alt="">
+                    <p>CART</p>
+                </a>
+            </div>
+            <div>
+                <a href="login.html" id="profile">
+                    <img src="images/menu4.png" alt="">
+                    <p>PROFILE</p>
+                </a>
+            </div>            
+        </div>
+    </div>
+</body>
+<script>
+
+</script>
+</html>

@@ -1,0 +1,116 @@
+body {
+    background-color: #EEEEEE;
+    margin: 0px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 0px 30px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    background-color: white;
+    /* border: 2px solid green; */
+}
+.nav > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 2px solid red; */
+    
+}
+.nav > div:nth-child(1){
+    width: 40%;
+    font-weight: bold;
+    
+}
+.nav > div:nth-child(2){
+    height: 100%;
+    width: 25%;
+}
+#logo {
+    height: 40px;
+}
+#offers {
+    background: #d4316f;
+    background: linear-gradient(to right, #d4316f 0%, #ED5133 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.nav > div > div {
+    /* border: 1px solid blue; */
+    justify-content: center;
+    align-items: center;
+}
+.nav a {
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    
+    text-align: center;
+}
+.links > a:nth-child(1) {
+    margin-top: 5px;
+}
+.menu a > img {
+    margin-top: 15px;
+    height: 20px;
+}
+
+.menu a > p {
+    margin-top: -5px;
+    font-size: 12px;
+}
+.products {
+    margin: 10px;
+    display: flex;
+}
+#sort-filter {
+    background-color: white;
+    width: 200px;
+    padding: 10px;
+    border: 2px solid red;
+}
+#sort-filter > p {
+    margin: 0px;
+    margin-right: 10px;
+}
+#sort-filter select,button {
+    width: 100%;
+    border: 3px solid #99cc33;
+    
+}
+#sort-filter input {
+    width: 90%;
+    border: 3px solid #99cc33;
+}
+.filter-price p {
+    margin-bottom: 0px;
+    
+}
+.filter-price input {
+    width: 43%;
+}
+.filter-price button {
+    border: none;
+    background-color: #99cc33;
+    border-radius: 4px;
+    padding: 5px 0px;
+    margin-top: 5px;
+}
+.filter-rating p{
+    margin: 0px;
+}
+
+#container {
+    width: 65%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 15px;
+}
+#container > div > img {
+    width: 100%;
+}
+
