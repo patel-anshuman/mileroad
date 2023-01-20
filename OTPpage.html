@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #eeeeee;
+        }
+        div {
+            display: flex;
+            flex-direction: column;
+            width:250px;
+            height: 100%;
+            margin: auto;
+            margin-top: 300px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            /* border: 2px solid red; */
+        }
+        input{
+            width: 100%;
+            margin: auto;
+            height: 40px;
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
+        button {
+            width: 100%;
+            margin: auto;
+            border: none;
+            background-color: green;
+            color: white;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 16px;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>       
+    <div>
+        <input id="otp" type="number" name="" placeholder="Enter OTP">
+        <button>Verify OTP</button>
+    </div>
+</body>
+<script>
+    let formEl = document.querySelector("div");
+    let otpInp = document.querySelector("#otp");
+    let btn = document.querySelector("button");
+
+    const OTP = 748596;
+
+    btn.addEventListener("click",() => {
+        if(otpInp.value==OTP){
+            location.href = "loginsuccess.html";
+        } else {
+            alert("Wrong OTP!! Please try again...");
+        }
+    });
+</script>
+</html>
