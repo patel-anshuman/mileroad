@@ -1,0 +1,222 @@
+[
+    {
+        "id": 3,
+        "image":"https://img3.junaroad.com/uiproducts/16574564/zoom_0-1570622434.jpg",
+        "name":"Black Printed T-Shirt",
+        "brand":"Campus Sutra",
+        "price": 519,
+        "mrp": 999,
+        "quantity": 1,
+        "category": "t-shirt",
+        "rating": 4.0
+    },
+    {
+        "id": 4,
+        "image":"https://img3.junaroad.com/uiproducts/18380631/zoom_0-1653109337.jpg",
+        "name":"Yellow Color-Blocked T-Shirt",
+        "brand":"Vendure Sports",
+        "price": 1019,
+        "mrp": 1199,
+        "quantity": 1,
+        "category": "t-shirt",
+        "rating": 3.5
+    },
+    {
+        "id": 5,
+        "image":"https://img3.junaroad.com/uiproducts/17573885/zoom_0-1614683779.jpg",
+        "name":"White Solid Casual Shirt",
+        "brand":"Mode Connection",
+        "price": 599,
+        "mrp": 1999,
+        "quantity": 1,
+        "category": "shirt",
+        "rating": 4.5
+    },
+    {
+        "id": 7,
+        "image":"https://img3.junaroad.com/uiproducts/18003471/zoom_0-1632540132.jpg",
+        "name":"Blue Denim Plain Jeans",
+        "brand":"Ragzo",
+        "price": 999,
+        "mrp": 1015,
+        "quantity": 1,
+        "category": "jeans",
+        "rating": 4.0
+    },
+    {
+        "id": 10,
+        "image":"https://img3.junaroad.com/uiproducts/17684824/zoom_0-1618930812.jpg",
+        "name":"Brown Solid Flat Front Formal Trouser",
+        "brand":"Inspire",
+        "price": 549,
+        "mrp": 1199,
+        "quantity": 1,
+        "category": "trousers",
+        "rating": 4.5
+    },
+    {
+        "id": 13,
+        "image":"https://img3.junaroad.com/uiproducts/17411294/zoom_0-1605973533.jpg",
+        "name":"Black Fabric Slip On Flip Flops",
+        "brand":"Paragon",
+        "price": 499,
+        "mrp": 429,
+        "quantity": 1,
+        "category": "footwear",
+        "rating": 4.0
+    },
+    {
+        "id": 101,
+        "image":"https://img3.junaroad.com/uiproducts/18720627/zoom_0-1669540609.jpg",
+        "name":"Multi Colored Printed Casual Shirt",
+        "brand":"Jean Cafe",
+        "price": 1499,
+        "mrp": 2429,
+        "quantity": 1,
+        "category": "shirt",
+        "rating": 4.0
+    },
+    {
+        "id": 102,
+        "image":"https://img3.junaroad.com/uiproducts/17063743/zoom_0-1592320191.jpg",
+        "name":"Pink Solid Dupion Dhoti Kurta Set",
+        "brand":"Brand Hangup",
+        "price": 1049,
+        "mrp": 2999,
+        "quantity": 1,
+        "category": "ethnic",
+        "rating": 4.0
+    },
+    {
+        "id": 103,
+        "image":"https://img3.junaroad.com/uiproducts/18841254/zoom_0-1670686473.jpg",
+        "name":"Brown Coloured Hooded Jacket",
+        "brand":"campus Sutra",
+        "price": 1499,
+        "mrp": 3499,
+        "quantity": 1,
+        "category": "winter",
+        "rating": 4.0
+    },
+    {
+        "id": 104,
+        "image":"https://img3.junaroad.com/uiproducts/18651967/zoom_0-1671443371.jpg",
+        "name":"Mens Black Solid Jogger",
+        "brand":"Todd n Teen",
+        "price": 1500,
+        "mrp": 450,
+        "quantity": 1,
+        "category": "trousers",
+        "rating": 4.0
+    },
+    {
+        "id": 105,
+        "image":"https://img3.junaroad.com/uiproducts/19168745/zoom_0-1673622365.jpg",
+        "name":"Peach Cotton Kurta Pyjama Ethnic Wear",
+        "brand":"Fashion Fricks",
+        "price": 1500,
+        "mrp": 800,
+        "quantity": 1,
+        "category": "ethnic",
+        "rating": 4.0
+    },
+    {
+        "id": 106,
+        "image":"https://img3.junaroad.com/uiproducts/18418479/zoom_0-1656495347.jpg",
+        "name":"Black Printed Polo T-Shirt",
+        "brand":"Fashion Fricks",
+        "price": 1549,
+        "mrp": 979,
+        "quantity": 1,
+        "category": "t-shirt",
+        "rating": 5.0
+    },
+    {
+        "id": 107,
+        "image":"https://img3.junaroad.com/uiproducts/18623294/zoom_0-1667039910.jpg",
+        "name":"White Checkered Casual Shirt",
+        "brand":"V Mart",
+        "price": 649,
+        "mrp": 750,
+        "quantity": 1,
+        "category": "shirt",
+        "rating": 5.0
+    },
+    {
+        "id": 108,
+        "image":"https://img3.junaroad.com/uiproducts/18182311/zoom_0-1640170230.jpg",
+        "name":"Brown Solid Light-Washed Denim Jean",
+        "brand":"V Mart",
+        "price": 649,
+        "mrp": 750,
+        "quantity": 1,
+        "category": "jeans",
+        "rating": 4.0
+    },
+    {
+        "id": 109,
+        "image":"https://img3.junaroad.com/uiproducts/18224542/zoom_0-1642683881.jpg",
+        "name":"Black Chest-Printed T-Shirt",
+        "brand":"Blamblack",
+        "price": 649,
+        "mrp": 890,
+        "quantity": 1,
+        "category": "t-shirt",
+        "rating": 4.0
+    },
+    {
+        "id": 110,
+        "image":"https://img3.junaroad.com/uiproducts/18224506/pri_175_p-1642683882.jpg",
+        "name":"Charcoal-Grey Chest-Printed T-Shirt",
+        "brand":"Blamblack",
+        "price": 699,
+        "mrp": 890,
+        "quantity": 1,
+        "category": "t-shirt",
+        "rating": 4.0
+    },
+    {
+        "id": 111,
+        "image":"https://img3.junaroad.com/uiproducts/18224528/pri_175_p-1642683883.jpg",
+        "name":"Navy-Blue Chest Printed T-Shirt",
+        "brand":"Blamblack",
+        "price": 649,
+        "mrp": 890,
+        "quantity": 1,
+        "category": "t-shirt",
+        "rating": 4.0
+    },
+    {
+        "id": 112,
+        "image":"https://img3.junaroad.com/uiproducts/18224526/pri_175_p-1642683883.jpg",
+        "name":"Light Blue Chest-Printed T-Shirt",
+        "brand":"Blamblack",
+        "price": 649,
+        "mrp": 890,
+        "quantity": 1,
+        "category": "t-shirt",
+        "rating": 3.5
+    },
+    {
+        "id": 113,
+        "image":"https://img3.junaroad.com/uiproducts/18269894/pri_175_p-1645083749.jpg",
+        "name":"Black Chest-Printed T-Shirt",
+        "brand":"Blamblack",
+        "price": 599,
+        "mrp": 890,
+        "quantity": 1,
+        "category": "t-shirt",
+        "rating": 2.5
+    },
+    {
+        "id": 114,
+        "image":"https://img3.junaroad.com/uiproducts/17267477/pri_175_p-1600088691.jpg",
+        "name":"Red Chest Print T-Shirt",
+        "brand":"Applause",
+        "price": 499,
+        "mrp": 799,
+        "quantity": 1,
+        "category": "t-shirt",
+        "rating": 5.0
+    }
+]

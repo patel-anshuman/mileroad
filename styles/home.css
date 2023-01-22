@@ -89,15 +89,23 @@ body {
     flex-wrap: nowrap;
     width: 60%;
     margin: auto;
+    margin-top: 20px;
     /* border: 2px solid blue; */
     text-align: center;
 }
+.category > div {
+    margin-inline: 10px;
+    
+}
 .category > div:not(2) {
     width: 100px;
+    
 }
 .category img {
-    width: 70%;
+    width: 50px;
+    border-radius: 50%;
 }
+
 .category p {
     font-size: 10px;
     margin-top: 0px;

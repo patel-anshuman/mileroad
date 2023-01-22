@@ -1,4 +1,4 @@
-const url = "scripts/products.json";
+const url = "scripts/men-products.json";
 
     let parent = document.getElementById("container");
     let fetchData = null;
@@ -94,7 +94,7 @@ const url = "scripts/products.json";
           price.innerText = `₹ ${ele.price}`;
           brand.innerText = `Brand ${ele.brand}`;
           rating.innerText = `Rating ${ele.rating}`;
-          buyBtn.textContent = "Buy";
+          buyBtn.textContent = "Add to Cart";
           
           buyBtn.addEventListener("click", () => {
             let buyItem = JSON.parse(localStorage.getItem("cart"))||[];
@@ -121,3 +121,35 @@ const url = "scripts/products.json";
         }
         return false;
       }
+
+      let profileEl = document.querySelector("#profile>p");
+      profileEl.textContent = "Login";
+      let user = JSON.parse(localStorage.getItem("user"))||[];
+
+      if(user==[] || user.mob==undefined){
+          profileEl.textContent = "Login";
+      } else {
+          profileEl.textContent = `Hi, ${user.mob}`;
+      }
+
+      let searchBtn = document.getElementById("search");
+      let searchBar = document.getElementById("search-bar");
+      let searchBox = document.getElementById("search-box");
+      
+      searchBtn.addEventListener("click",() => {
+        searchBar.style.display = "flex";
+      });
+
+      searchBar.addEventListener("submit", (e) => {
+        e.preventDefault();
+        let searchPara = searchBox.value;
+
+        let filterData = fetchData.filter(ele => {
+          if(ele.name.toUpperCase().includes(searchPara.toUpperCase())){
+            return ele;
+            console.log(ele);
+          }
+        });
+        displayData(filterData);
+        searchBar.style.display = "none";
+      });

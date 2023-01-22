@@ -78,6 +78,14 @@
             padding: 10px;
             /* border: 2px solid green; */
         }
+        #cart > div > div:nth-child(2) button {
+            padding: 5px 10px;
+            font-size: 16px;
+            margin-inline: 5px;
+            border: none;
+            border-radius: 5px;
+            background-color: #99cc33;
+        }
         #cart > div > div:nth-child(3) {
             text-align: right;
             padding: 20px;
@@ -166,8 +174,8 @@
             <div class="fx jcsb">
                 <img src="https://img0.junaroad.com/images/icons/coupon_icon_v2.png" alt="">
                 <div>
-                    <p>APPLY COUPON CODE</p>
-                    <p>1 Coupon Available</p>
+                    <p id="coupon1">APPLY COUPON CODE</p>
+                    <p id="coupon2">1 Coupon Available</p>
                 </div>
                 <button id="add-btn">+ ADD</button>
             </div>
@@ -200,6 +208,9 @@
     let tax = document.getElementById("tax");
     let totalPay = document.getElementById("total-pay");
     let buyBtn = document.getElementById("buy");
+    let coupon = document.getElementById("add-btn");
+    let coupon1 = document.getElementById("coupon1");
+    let coupon2 = document.getElementById("coupon2");
 
     displayData(cartData);
     function displayData(data) {
@@ -224,7 +235,8 @@
             div1.append(image);
             name.textContent = ele.name;
             brand.textContent = `by ${ele.brand}`;
-            size.textContent = `size : ${ele.size}`;
+            // size.textContent = `size : ${ele.size}`;
+            size.textContent = "size : unisize";
             Increment.textContent="+";
             quantity.textContent = ele.quantity;
             Decrement.textContent="-";
@@ -233,31 +245,28 @@
             price.textContent = `₹${ele.price}`;
             fs.textContent = "free shipping";
             div3.append(remove,price,fs);
+            card.append(div1,div2,div3);
+            cartEl.append(card);
 
             Increment.addEventListener("click", () => {
                 ele=ele.quantity++;
-                localStorage.setItem("cart",JSON.stringify(cart));
-                displayData(data);
+                localStorage.setItem("cart",JSON.stringify(cartData));
+                displayData(cartData);
             });
 
             Decrement.addEventListener("click", () => {
                 if(ele.quantity>1){
                     ele=ele.quantity--;
-                    localStorage.setItem("cart",JSON.stringify(cart));
-                    displayData(data);
+                    localStorage.setItem("cart",JSON.stringify(cartData));
+                    displayData(cartData);
                 }
             });
 
             remove.addEventListener("click",() => {
                 data.splice(ind,1);
-                localStorage.setItem("cart",JSON.stringify(data));
+                localStorage.setItem("cart",JSON.stringify(cartData));
                 displayData(data);
             });
-
-            card.append(div1,div2,div3);
-            cartEl.append(card);
-
-            
         });
 
         let sum=0;
@@ -265,19 +274,32 @@
             sum+=cartData[i].price*cartData[i].quantity;
         }
         total.textContent=sum;
+        tax.textContent= Math.floor(sum*0.1);
+        let taxNum =tax.textContent;
+        totalPay.textContent=Number(sum)+Number(taxNum);
     }
-
     
+    let couponApplied=false;
+    coupon.addEventListener("click",() => {
+        if(couponApplied==false){
+            couponApplied=true;
+            totalPay.textContent = Math.floor(Number(totalPay.textContent*.7));
+            coupon1.textContent = "Coupon Applied !"
+            coupon2.innerHTML="";
+        }
+    });
+
     buyBtn.addEventListener("click", () => {
         alert("Order Placed Successfully 🤩");
         setTimeout(() => {
             location.href = "home.html";
         },1000);
-        let orderData = JSON.parse(localStorage.getItem("order"))||[];
+        let orderData = cartData.splice(0,cartData.length);
         localStorage.setItem("order",JSON.stringify(orderData));
-        cartData=[];
         localStorage.setItem("cart",JSON.stringify(cartData));
     });
+
+    
 
 </script>
 </html>
