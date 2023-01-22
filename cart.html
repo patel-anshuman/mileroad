@@ -53,6 +53,10 @@
         .links > a {
             margin-top: 5px;
         }
+        #orders {
+            font-weight: 500;
+            /* border: 2px solid red; */
+        }
         .fx {
             display: flex;
         }
@@ -152,6 +156,9 @@
             <a href="home.html">
                 <img src="images/logo.png" id="logo" alt="">
             </a>
+        </div>
+        <div>
+            <a href="orders.html" id="orders">My Orders</a>
         </div>
     </div>
     <!-- <div>
@@ -290,13 +297,8 @@
     });
 
     buyBtn.addEventListener("click", () => {
-        alert("Order Placed Successfully 🤩");
-        setTimeout(() => {
-            location.href = "home.html";
-        },1000);
-        let orderData = cartData.splice(0,cartData.length);
-        localStorage.setItem("order",JSON.stringify(orderData));
         localStorage.setItem("cart",JSON.stringify(cartData));
+        location.href = "payment.html";
     });
 
     

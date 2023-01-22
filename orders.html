@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    
+</body>
+<script>
+    let orderData = JSON.parse(localStorage.getItem("order"));
+
+    displayData(orderData);
+    
+    function displayData(data) {
+        cartEl.innerHTML="";
+        data.forEach((ele,ind) => {
+            let card = document.createElement("div");
+            let div1 = document.createElement("div");
+            let image = document.createElement("img");
+            let div2 = document.createElement("div");
+            let name = document.createElement("p");
+            let brand = document.createElement("p");
+            let size = document.createElement("p");
+            let Increment = document.createElement("button");
+            let quantity = document.createElement("span");
+            let Decrement = document.createElement("button");
+            let div3 = document.createElement("div");
+            let remove = document.createElement("button");
+            let price = document.createElement("p");
+            let fs = document.createElement("p");
+
+            image.src = ele.image;
+            div1.append(image);
+            name.textContent = ele.name;
+            brand.textContent = `by ${ele.brand}`;
+            // size.textContent = `size : ${ele.size}`;
+            size.textContent = "size : unisize";
+            Increment.textContent="+";
+            quantity.textContent = ele.quantity;
+            Decrement.textContent="-";
+            div2.append(name,brand,size,Increment,quantity,Decrement);
+            remove.textContent = "❌";
+            price.textContent = `₹${ele.price}`;
+            fs.textContent = "free shipping";
+            div3.append(remove,price,fs);
+            card.append(div1,div2,div3);
+            cartEl.append(card);
+
+            Increment.addEventListener("click", () => {
+                ele=ele.quantity++;
+                localStorage.setItem("cart",JSON.stringify(cartData));
+                displayData(cartData);
+            });
+
+            Decrement.addEventListener("click", () => {
+                if(ele.quantity>1){
+                    ele=ele.quantity--;
+                    localStorage.setItem("cart",JSON.stringify(cartData));
+                    displayData(cartData);
+                }
+            });
+
+            remove.addEventListener("click",() => {
+                data.splice(ind,1);
+                localStorage.setItem("cart",JSON.stringify(cartData));
+                displayData(data);
+            });
+        });
+
+        let sum=0;
+        for(let i=0;i<cartData.length;i++){
+            sum+=cartData[i].price*cartData[i].quantity;
+        }
+        total.textContent=sum;
+        tax.textContent= Math.floor(sum*0.1);
+        let taxNum =tax.textContent;
+        totalPay.textContent=Number(sum)+Number(taxNum);
+    }
+</script>
+</html>
