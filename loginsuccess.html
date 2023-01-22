@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            display: block;
+            margin: auto;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            margin-top: 250px;
+        }
+        img {
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="images/tick.png" alt="">
+        <h2>OTP Verified</h2>
+        <h3>Logged in successfully</h3>
+    </div>
+</body>
+<script>
+    window.addEventListener("load", () => {
+        setTimeout(function() {
+            location.href = "home.html";
+        }, 1000)
+    });
+</script>
+</html>
