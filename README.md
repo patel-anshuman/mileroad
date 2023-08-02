@@ -4,7 +4,7 @@ MileRoad is an e-commerce website that deals in clothing and accessories for wom
 
 ## Deployed Link
 
-You can access the deployed website at https://prismatic-marzipan-47485e.netlify.app/.
+You can access the deployed website at https://mileroad.netlify.app/.
 
 ## Features
 
