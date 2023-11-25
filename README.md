@@ -11,16 +11,12 @@ You can access the deployed website at [MileRoad]([https://www.limeroad.com/](ht
 - **Discounts:** Apply exclusive discounts to enhance your shopping experience.
 - **Seamless Purchases:** Make your fashion choices seamlessly—all in one convenient place.
 
-MileRoad offers the following features:
-
-- Landing page
-- Products page - Search feature | Sort by price | Filter by price & rating
-- Sign-up/Login page,
-- Cart page
-- Payment page.
-
 ## Tech Stack
 
 - HTML5
 - CSS3
 - JavaScript
+
+## Contact Information
+
+For inquiries or collaboration, feel free to contact me at [patelanshuman6@gmail.com](mailto:patelanshuman6@gmail.com).
